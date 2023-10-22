@@ -1,4 +1,82 @@
-        /* Card container */
+.navbar {
+    display: block;
+    width: 100%;
+    transition: 0.5s;
+    background: linear-gradient(to bottom, #8000ff, #3333ff);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+li  {
+    display: inline;
+    /* float: left;
+    display: block; */
+    font-size: 40px;
+    padding:50px;
+    border-right: 1px;
+    border: black;
+} 
+ 
+li:last-child {
+    border-right: none;
+}  
+
+  .container{
+    float: center;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #830e0e;
+    background: linear-gradient(to bottom, #8000ff, #3333ff);
+  }
+  .container:hover{
+    background-color: linear-gradient(hover, orange, white, green);
+  }
+
+  .circle{
+    margin: 40px;
+    width: 200px;
+    height: 200px;
+    background-color: #77e0a3 ;
+    border-radius: 10%;
+    border: 10px solid transparent;
+    animation: rotate 2s linear infinite;
+    cursor: pointer;
+
+  }
+
+  .circle:hover{
+    border-radius: 100%;
+    background-color: linear-gradient(360deg, orange, white, green);
+  }
+
+  @keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+        border-top-color: rgb(245, 200, 51);
+    }
+    25%{
+        transform: rotate(90deg);
+        border-top-color: rgb(24, 177, 51);
+    }
+    50%{
+        transform: rotate(180deg);
+        border-top-color: rgb(51, 174, 245);
+    }
+    75%{
+        transform: rotate(270deg);
+        border-top-color: rgb(206, 51, 245);
+    }
+    100%{
+        transform: rotate(360deg);
+        border-top-color: rgb(245, 51, 51);
+    }
+  }
+
+/* Card container */
         .card-container {
             perspective: 1000px;
             width: 300px;
