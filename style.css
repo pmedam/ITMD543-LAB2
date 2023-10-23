@@ -84,12 +84,34 @@ li  {
     font-size: 40px;
     padding:50px;
     border-right: 1px;
-    border: black;
+    border: whitesmoke;
+    color: black;
+    text-decoration: none;
 } 
  
 li:last-child {
     border-right: none;
 }  
+
+figure.zoom {
+    background-position: 50% 50%;
+    position: relative;
+    margin: 150px auto;
+    border: 5px solid white;
+    box-shadow: -1px 5px 15px black;
+    height: 300px;
+    width: 500px;
+    overflow: hidden;
+    cursor: zoom-in;
+  }
+  figure.zoom img:hover {
+    opacity: 0;
+  }
+  figure.zoom img {
+    transition: opacity 0.5s;
+    display: block;
+    width: 100%;
+  }
 
   /* .container{
     float: center;
@@ -143,31 +165,31 @@ li:last-child {
   } */
 
 /* Card container */
-        /* .card-container {
+        .card-container {
             perspective: 1000px;
             width: 300px;
             height: 400px;
-        } */
+        }
 
         /* Card wrapper for flipping */
-        /* .card-wrapper {
+        .card-wrapper {
             width: 100%;
             height: 100%;
             transform-style: preserve-3d;
             transition: transform 0.5s;
-        } */
+        }
 
         /* Front of the card */
-        /* .card-front, .card-back {
+        .card-front, .card-back {
             width: 100%;
             height: 100%;
             position: absolute;
             backface-visibility: hidden;
             border-radius: 10px;
-        } */
+        }
 
         /* Front of the card with gradient background */
-        /* .card-front {
+        .card-front {
             background: linear-gradient(to bottom, #8000ff, #3333ff);
             color: white;
             display: flex;
@@ -175,10 +197,10 @@ li:last-child {
             align-items: center;
             font-size: 20px;
             transform: rotateY(0deg);
-        } */
+        }
 
         /* Back of the card */
-        /* .card-back {
+        .card-back {
             background: linear-gradient(to bottom, #3333ff, #ff00cc);
             color: white;
             display: flex;
@@ -186,9 +208,9 @@ li:last-child {
             align-items: center;
             font-size: 18px;
             transform: rotateY(180deg);
-        } */
+        }
 
         /* Apply hover effect for flipping */
-        /* .card-container:hover .card-wrapper {
+        .card-container:hover .card-wrapper {
             transform: rotateY(180deg);
-        } */
+        }
