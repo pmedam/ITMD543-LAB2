@@ -67,6 +67,7 @@ body{
     display: block;
     width: 100%;
     transition: 0.5s;
+    color:black;
     background: linear-gradient(to bottom, #8000ff, #3333ff);
     font-family:'Times New Roman', Times, serif;
 }
@@ -84,10 +85,12 @@ li  {
     font-size: 40px;
     padding:50px;
     border-right: 1px;
-    border: whitesmoke;
-    color: black;
-    text-decoration: none;
 } 
+li a{
+    text-decoration: none;
+    color: black;
+    border: whitesmoke;
+}
  
 li:last-child {
     border-right: none;
@@ -113,19 +116,19 @@ figure.zoom {
     width: 100%;
   }
 
-  /* .container{
+  .container1{
     float: center;
     width: 300px;
     height: 300px;
     border: 1px solid #830e0e;
     background: linear-gradient(to bottom, #8000ff, #3333ff);
-  } */
+  }
 
-  /* .container:hover{
+  .container:hover{
     background-color: linear-gradient(hover, orange, white, green);
-  } */
+  }
 
-  /* .circle{
+  .circle{
     margin: 40px;
     width: 200px;
     height: 200px;
@@ -134,14 +137,14 @@ figure.zoom {
     border: 10px solid transparent;
     animation: rotate 2s linear infinite;
     cursor: pointer;
-  } */
+  }
 
-  /* .circle:hover{
+  .circle:hover{
     border-radius: 100%;
     background-color: linear-gradient(360deg, orange, white, green);
-  } */
+  }
 
-  /* @keyframes rotate{
+  @keyframes rotate{
     0%{
         transform: rotate(0deg);
         border-top-color: rgb(245, 200, 51);
@@ -162,11 +165,12 @@ figure.zoom {
         transform: rotate(360deg);
         border-top-color: rgb(245, 51, 51);
     }
-  } */
+  }
 
 /* Card container */
         .card-container {
-            perspective: 1000px;
+            /* perspective:1000px; */
+            padding: 150px;
             width: 300px;
             height: 400px;
         }
@@ -214,3 +218,24 @@ figure.zoom {
         .card-container:hover .card-wrapper {
             transform: rotateY(180deg);
         }
+
+ .js1
+ {
+    margin: 0px;
+    padding: 0px;
+position: relative;
+    width: 150%;
+    height: 200%;
+ }
+
+ .video{
+    width: 400;
+ }
+
+ .js-container{
+    display: grid;
+    grid-template-rows: repeat(5);
+ }
+ .js-container input{
+    grid-row: 2;
+ }
