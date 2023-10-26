@@ -3,11 +3,11 @@
 function myFunction() {
     var x = document.getElementById("snackbar");
     x.className = "show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-  }
+    setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+}
 
 
-  
+
 //Javascript used in Javascript.HTML
 document.getElementById("colorButton1").addEventListener("click", () => {
     const text = document.querySelector("#example1 p");
@@ -51,4 +51,15 @@ function getRandomColor() {
         color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
+}
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
 }

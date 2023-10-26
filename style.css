@@ -1,11 +1,36 @@
-body{
+body {
     margin: 0;
     padding: 0;
     background: #262626;
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.container{
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    float: left;
+    display: block;
+    font-size: 40px;
+    padding: 50px;
+    border-right: 1px;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+    border: whitesmoke;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+.container {
     position: absolute;
     top: 10%;
     left: 50%;
@@ -15,7 +40,7 @@ body{
     position: center;
 }
 
-.container img{
+.container img {
     position: absolute;
     top: 0;
     left: 0;
@@ -25,7 +50,7 @@ body{
     border: 10px solid transparent;
 }
 
-.container .text-box{
+.container .text-box {
 
     position: absolute;
     top: 0;
@@ -40,13 +65,13 @@ body{
     transition: 3s;
 }
 
-.container .text-box:hover{
+.container .text-box:hover {
     opacity: 1;
     filter: blur(0);
     transform: scale(1.1);
 }
 
-.container .text-box h1{
+.container .text-box h1 {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -54,7 +79,7 @@ body{
     font-size: 60px;
 }
 
-.container .text-box p{
+.container .text-box p {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -67,34 +92,11 @@ body{
     display: block;
     width: 100%;
     transition: 0.5s;
-    color:black;
+    color: black;
     background: linear-gradient(to bottom, #8000ff, #3333ff);
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-li  {
-    display: inline;
-    float: left;
-    display: block;
-    font-size: 40px;
-    padding:50px;
-    border-right: 1px;
-} 
-li a{
-    text-decoration: none;
-    color: black;
-    border: whitesmoke;
-}
- 
-li:last-child {
-    border-right: none;
-}  
 
 figure.zoom {
     background-position: 50% 50%;
@@ -106,141 +108,127 @@ figure.zoom {
     width: 500px;
     overflow: hidden;
     cursor: zoom-in;
-  }
-  figure.zoom img:hover {
+}
+
+figure.zoom img:hover {
     opacity: 0;
-  }
-  figure.zoom img {
+}
+
+figure.zoom img {
     transition: opacity 0.5s;
     display: block;
     width: 100%;
-  }
+}
 
-  .container1{
+.container1 {
     float: center;
     width: 300px;
     height: 300px;
     border: 1px solid #830e0e;
     background: linear-gradient(to bottom, #8000ff, #3333ff);
-  }
+}
 
-  .container:hover{
+.container:hover {
     background-color: linear-gradient(hover, orange, white, green);
-  }
+}
 
-  .circle{
+.circle {
     margin: 40px;
     width: 200px;
     height: 200px;
-    background-color: #77e0a3 ;
+    background-color: #77e0a3;
     border-radius: 10%;
     border: 10px solid transparent;
     animation: rotate 2s linear infinite;
     cursor: pointer;
-  }
+}
 
-  .circle:hover{
+.circle:hover {
     border-radius: 100%;
     background-color: linear-gradient(360deg, orange, white, green);
-  }
+}
 
-  @keyframes rotate{
-    0%{
+@keyframes rotate {
+    0% {
         transform: rotate(0deg);
         border-top-color: rgb(245, 200, 51);
     }
-    25%{
+
+    25% {
         transform: rotate(90deg);
         border-top-color: rgb(24, 177, 51);
     }
-    50%{
+
+    50% {
         transform: rotate(180deg);
         border-top-color: rgb(51, 174, 245);
     }
-    75%{
+
+    75% {
         transform: rotate(270deg);
         border-top-color: rgb(206, 51, 245);
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
         border-top-color: rgb(245, 51, 51);
     }
-  }
+}
 
 /* Card container */
-        .card-container {
-            /* perspective:1000px; */
-            padding: 150px;
-            width: 300px;
-            height: 400px;
-        }
+.card-container {
+    /* perspective:1000px; */
+    padding: 150px;
+    width: 300px;
+    height: 400px;
+}
 
-        /* Card wrapper for flipping */
-        .card-wrapper {
-            width: 100%;
-            height: 100%;
-            transform-style: preserve-3d;
-            transition: transform 0.5s;
-        }
+/* Card wrapper for flipping */
+.card-wrapper {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
 
-        /* Front of the card */
-        .card-front, .card-back {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            backface-visibility: hidden;
-            border-radius: 10px;
-        }
+/* Front of the card */
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
 
-        /* Front of the card with gradient background */
-        .card-front {
-            background: linear-gradient(to bottom, #8000ff, #3333ff);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 20px;
-            transform: rotateY(0deg);
-        }
+/* Front of the card with gradient background */
+.card-front {
+    background: linear-gradient(to bottom, #8000ff, #3333ff);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transform: rotateY(0deg);
+}
 
-        /* Back of the card */
-        .card-back {
-            background: linear-gradient(to bottom, #3333ff, #ff00cc);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 18px;
-            transform: rotateY(180deg);
-        }
+/* Back of the card */
+.card-back {
+    background: linear-gradient(to bottom, #3333ff, #ff00cc);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    transform: rotateY(180deg);
+}
 
-        /* Apply hover effect for flipping */
-        .card-container:hover .card-wrapper {
-            transform: rotateY(180deg);
-        }
+/* Apply hover effect for flipping */
+.card-container:hover .card-wrapper {
+    transform: rotateY(180deg);
+}
 
- .js1
- {
-    margin: 0px;
-    padding: 0px;
-position: relative;
-    width: 150%;
-    height: 200%;
- }
-
- .video{
-    width: 400;
- }
-
- .js-container{
-    display: grid;
-    grid-template-rows: repeat(5);
- }
- .js-container input{
-    grid-row: 2;
- }
-
- #snackbar {
+#snackbar {
     visibility: hidden;
     min-width: 250px;
     margin-left: -125px;
@@ -255,33 +243,61 @@ position: relative;
     left: 50%;
     bottom: 30px;
     font-size: 17px;
-  }
-  
-  #snackbar.show {
+}
+
+#snackbar.show {
     visibility: visible;
     -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  }
-  
-  @-webkit-keyframes fadein {
-    from {bottom: 0; opacity: 0;} 
-    to {bottom: 30px; opacity: 1;}
-  }
-  
-  @keyframes fadein {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 30px; opacity: 1;}
-  }
-  
-  @-webkit-keyframes fadeout {
-    from {bottom: 30px; opacity: 1;} 
-    to {bottom: 0; opacity: 0;}
-  }
-  
-  @keyframes fadeout {
-    from {bottom: 30px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
-  }
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
 
 
 .example {
@@ -305,3 +321,72 @@ button {
     margin-top: 10px;
     border: 1px solid #333;
 }
+
+.warningsign{
+    color: red;
+
+}
+
+#text{
+    display:none;
+    color:white;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+  }
+  
+  /* Style the submit button */
+  input[type=submit] {
+    background: linear-gradient(to bottom, #8000ff, #3333ff);
+    color: white;
+  }
+  
+  /* Style the container for inputs */
+  .pwdcontainer {
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+  /* The message box is shown when the user clicks on the password field */
+  #message {
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+  }
+  
+  #message p {
+    padding: 10px 35px;
+    font-size: 18px;
+  }
+  
+  /* Add a green text color and a checkmark when the requirements are right */
+  .valid {
+    color: green;
+  }
+  
+  .valid:before {
+    position: relative;
+    left: -35px;
+    content: "&#10004;";
+  }
+  
+  /* Add a red text color and an "x" icon when the requirements are wrong */
+  .invalid {
+    color: white;
+  }
+  
+  .invalid:before {
+    position: relative;
+    left: -35px;
+    content: "&#10006;";
+  }

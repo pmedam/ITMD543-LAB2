@@ -1,55 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./sidenav.css">
+    </script>
 
     <title>JAVASCRIPT</title>
 </head>
+
 <body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">HTML</a>
+        <a href="CSS.html">CSS</a>
+        <a href="JavaScript.html">JAVASCRIPT</a>
+    </div>
+    <div id="main">
+        <!-- <span onclick="openNav()">Open</span> -->
+        <span style="font-size: 50px;cursor: pointer;color: whitesmoke !important;" onclick="openNav()">&#9776;
+            Open</span>
 
-        <div class="navbar">
-            <ul>
-                <li><a href="index.html">HTML</a></li>
-                <li><a href="CSS.html">CSS</a></li>
-                <li><a href="JavaScript.html">JAVASCRIPT</a></li>
-            </ul>
-        </div>
+        <div class="container">
+            <div class="example" id="example1">
+                <h2>Example 1: Change Text Color</h2>
+                <button id="colorButton1">Change Color</button>
+                <p>This text can change color.</p>
+            </div>
 
-    <div class = "container">
-        
-        <div class="example" id="example1">
-            <h2>Example 1: Change Text Color</h2>
-            <button id="colorButton1">Change Color</button>
-            <p>This text can change color.</p>
-        </div>
-    
-        <div class="example" id="example2">
-            <h2>Example 2: Counter</h2>
-            <button id="increment">Increment</button>
-            <span id="count">0</span>
-            <button id="decrement">Decrement</button>
-        </div>
-    
-        <div class="example" id="example3">
-            <h2>Example 3: Toggle Visibility</h2>
-            <button id="toggleButton">Toggle Visibility</button>
-            <p id="toggleText">This can be toggled.</p>
-        </div>
-    
-        <div class="example" id="example4">
-            <h2>Example 4: Mouse Coordinates</h2>
-            <p id="mouseCoords">Mouse Coordinates: (0, 0)</p>
-        </div>
-    
-        <div class="example" id="example5">
-            <h2>Example 5: Random Color</h2>
-            <button id="colorButton2">Randomize Color</button>
-            <div id="randomColorBox"></div>
+            <div class="example" id="example2">
+                <h2>Example 2: Counter</h2>
+                <button id="increment">Increment</button>
+                <span id="count">0</span>
+                <button id="decrement">Decrement</button>
+            </div>
+
+            <div class="example" id="example3">
+                <h2>Example 3: Toggle Visibility</h2>
+                <button id="toggleButton">Toggle Visibility</button>
+                <p id="toggleText">This can be toggled.</p>
+            </div>
+
+            <div class="example" id="example4">
+                <h2>Example 4: Mouse Coordinates</h2>
+                <p id="mouseCoords">Mouse Coordinates: (0, 0)</p>
+            </div>
+
+            <div class="example" id="example5">
+                <h2>Example 5: Random Color</h2>
+                <button id="colorButton2">Randomize Color</button>
+                <div id="randomColorBox"></div>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
-
 </body>
+
 </html>

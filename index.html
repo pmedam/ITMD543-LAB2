@@ -3,28 +3,34 @@
 
 <head>
     <link rel="stylesheet" href="./style.css">
-<title>HTML</title>
+    <link rel="stylesheet" href="./sidenav.css">
+    <title>HTML</title>
 </head>
 
 <body>
-    <header>
-        <div class="navbar">
-            <ul>
-                <li><a href="index.html">HTML</a></li>
-                <li><a href="CSS.html">CSS</a></li>
-                <li><a href="JavaScript.html">JAVASCRIPT</a></li>
-            </ul>
-        </div>
-    </header>
-    <div class = "container">
-        <img src="MyImage.jpg" alt="">
-        <div class = "text-box">
-            <h1> Pradeep Kumar Medam</h1>
-            <p>Occupation : Student<br>
-                Institution Name: Illinois Institute Of Technology<br>
-                CWID: A20528923<br>
-            </p>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">HTML</a>
+        <a href="CSS.html">CSS</a>
+        <a href="JavaScript.html">JAVASCRIPT</a>
+    </div>
+    <div id="main">
+        <!-- <span onclick="openNav()">Open</span> -->
+        <span style="font-size: 50px;cursor: pointer;color: whitesmoke !important;" onclick="openNav()">&#9776;
+            Open</span>
+        <div class="container">
+            <img src="MyImage.jpg" alt="">
+            <div class="text-box">
+                <h1> Pradeep Kumar Medam</h1>
+                <p>Occupation : Student<br>
+                    Institution Name: Illinois Institute Of Technology<br>
+                    CWID: A20528923<br>
+                </p>
+            </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
+
 </html>

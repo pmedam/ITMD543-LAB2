@@ -1,44 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/sidenav.css">
     <title>CSS Properties</title>
 </head>
+
 <body>
-    <header>
-        <div class="navbar">
-            <ul>
-                <li><a href="index.html">HTML</a></li>
-                <li><a href="CSS.html">CSS</a></li>
-                <li><a href="JavaScript.html">JAVASCRIPT</a></li>
-            </ul>
-        </div>
-    </header>
-    
-   <div class="card-container">
-        <div class="card-wrapper">
-            <div class="card-front">
-                Hover onto me
-            </div>
-            <div class="card-back">
-                Move out the cursor
-            </div>
-        </div>
-        <br>
-
-        <div class = "container1">
-            <div class = "circle" ></div>
-        </div>
-        <br>
-        <div class = " Loading">
-        </div>
-
-        <button onclick="myFunction()">Show Snackbar - Click on me</button>
-        <div id="snackbar">Some text some message..</div>
-        <script src="script.js"></script>
-
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">HTML</a>
+        <a href="CSS.html">CSS</a>
+        <a href="JavaScript.html">JAVASCRIPT</a>
     </div>
+    <div id="main">
+        <!-- <span onclick="openNav()">Open</span> -->
+        <span style="font-size: 50px;cursor: pointer;color: whitesmoke !important;" onclick="openNav()">&#9776;
+            Open</span>
+
+        <div class="card-container">
+            <div class="card-wrapper">
+                <div class="card-front">
+                    Hover onto me
+                </div>
+                <div class="card-back">
+                    Move out the cursor
+                </div>
+            </div>
+            <hr>
+
+            <div class="container1">
+                <div class="circle"></div>
+            </div>
+            <div class=" Loading">
+            </div>
+            <hr>
+            <button onclick="myFunction()">Show Snackbar - Click on me</button>
+            <div id="snackbar">Some text some message..</div>
+            <hr>
+            <div class="pwdcontainer">
+                <form action="/action_page.php">
+                    <label for="usrname">Username</label>
+                    <input type="text" id="usrname" name="usrname" required>
+
+                    <label for="psw">Password</label>
+                    <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                        required>
+
+                        <input type="submit" value="Submit">
+                </form>
+            </div>
+
+            <div id="message">
+                <h3>Password must contain the following:</h3>
+                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                <p id="number" class="invalid">A <b>number</b></p>
+                <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+            </div>
+            <script src="script.js"></script>
+            <script src="passwordvalidation.js"></script>
+        </div>
 </body>
+
 </html>
