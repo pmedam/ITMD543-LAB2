@@ -1,36 +1,54 @@
-var todos = [];
+//Javascript used in CSS.HTML to show a popup at the bottom of the page
 
-function addTodo() {
-  var todoInput = document.getElementById('todo-input');
-  var todoList = document.getElementById('todo-list');
+function myFunction() {
+    var x = document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  }
+
+
   
-  var todoText = todoInput.value;
-  if (todoText) {
-    todos.push(todoText);
-    todoInput.value = '';
-    displayTodos();
-  }
-}
+//Javascript used in Javascript.HTML
+document.getElementById("colorButton1").addEventListener("click", () => {
+    const text = document.querySelector("#example1 p");
+    text.style.color = getRandomColor();
+});
 
-function displayTodos() {
-  var todoList = document.getElementById('todo-list');
-  todoList.innerHTML = '';
-  todos.forEach(function (todo, index) {
-    var li = document.createElement('li');
-    li.textContent = todo;
-    todoList.appendChild(li);
-  });
-}
+// Example 2: Counter
+let count = 0;
+const countElement = document.getElementById("count");
+document.getElementById("increment").addEventListener("click", () => {
+    count++;
+    countElement.textContent = count;
+});
+document.getElementById("decrement").addEventListener("click", () => {
+    count--;
+    countElement.textContent = count;
+});
 
-function calculateSum(a, b) {
-    return a + b;
-  }
+// Example 3: Toggle Visibility
+const toggleText = document.getElementById("toggleText");
+document.getElementById("toggleButton").addEventListener("click", () => {
+    toggleText.style.display = toggleText.style.display === "none" ? "block" : "none";
+});
 
-  function toggleVisibility(elementId) {
-    var element = document.getElementById(elementId);
-    if (element.style.display === 'none') {
-      element.style.display = 'block';
-    } else {
-      element.style.display = 'none';
+// Example 4: Mouse Coordinates
+document.getElementById("example4").addEventListener("mousemove", (event) => {
+    const coords = `Mouse Coordinates: (${event.clientX}, ${event.clientY})`;
+    document.getElementById("mouseCoords").textContent = coords;
+});
+
+// Example 5: Random Color
+document.getElementById("colorButton2").addEventListener("click", () => {
+    const randomColorBox = document.getElementById("randomColorBox");
+    randomColorBox.style.backgroundColor = getRandomColor();
+});
+
+function getRandomColor() {
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
     }
-  }
+    return color;
+}
