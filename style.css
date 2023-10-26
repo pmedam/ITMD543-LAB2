@@ -377,6 +377,7 @@ input {
   .valid:before {
     position: relative;
     left: -35px;
+
   }
   
   /* Add a red text color and an "x" icon when the requirements are wrong */
