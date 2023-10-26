@@ -377,16 +377,14 @@ input {
   .valid:before {
     position: relative;
     left: -35px;
-    content: "&#10004;";
   }
   
   /* Add a red text color and an "x" icon when the requirements are wrong */
   .invalid {
-    color: white;
+    color: red;
   }
   
   .invalid:before {
     position: relative;
     left: -35px;
-    content: "&#10006;";
   }
